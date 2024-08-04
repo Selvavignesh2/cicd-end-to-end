@@ -19,8 +19,10 @@ pipeline {
         stage('Build Docker'){
             steps{
                 script{
-                    sh '''echo docker build image
-                    docker build -t Selvavignesh2/cicd-e2e:${BUILD_NUMBER} .'''
+                    sh '''
+                    echo 'Buid Docker Image'
+                    docker build -t abhishekf5/cicd-e2e:${BUILD_NUMBER} .
+                    '''
                 }
             }
         }
@@ -30,7 +32,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push Selvavignesh2/cicd-e2e:${BUILD_NUMBER}
+                    docker push abhishekf5/cicd-e2e:${BUILD_NUMBER}
                     '''
                 }
             }
