@@ -38,6 +38,7 @@ pipeline {
         
         stage('Checkout K8S manifest SCM'){
             steps {
+                git credentialsId: '88db7474-a491-47c8-8f0e-4f1c29561e1d',
                 url: 'https://github.com/Selvavignesh2/cicd-demo-manifests-repo.git',
                 branch: 'main'
             }
