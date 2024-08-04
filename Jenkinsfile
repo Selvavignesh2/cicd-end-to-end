@@ -10,7 +10,7 @@ pipeline {
         
         stage('Checkout'){
            steps {
-                url: 'https://github.com/Selvavignesh2/cicd-end-to-end.git',
+                url: 'https://github.com/Selvavignesh2/cicd-end-to-end',
                 branch: 'main'
            }
         }
